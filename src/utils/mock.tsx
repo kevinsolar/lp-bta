@@ -1,16 +1,22 @@
-import Image from "next/image";
-
-export default function QuemSomos() {
-	return (
-		<section id="quem-somos" className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-6 items-center">
-      <div className="order-2 lg:order-1 w-full aspect-square rounded-3xl overflow-hidden">
-        <Image src="/quem-somos.jpg" alt="Sault College" width={1000} height={600} className="w-full h-full object-cover" />
-      </div>
-			<div className="lg:px-16 order-1 lg:order-2">
-				<h2 className="text-6xl lg:text-8xl mb-6 text-title dark:text-foreground">
-					O <span className="text-highlight block">Sault</span><span className="text-highlight block">College</span>
-				</h2>
-				<p>
+export const DATA = {
+	hero: {
+		title: (
+			<>
+				<span className="text-highlight">Estude</span> e{" "}
+				<span className="text-highlight">trabalhe</span>, ao mesmo tempo, no
+				Canadá
+			</>
+		),
+		image_src: "/estudetrabalhe.webp",
+	},
+	quem_somos: {
+		title: (
+			<>
+				O <span className="text-highlight block">Sault</span>
+				<span className="text-highlight block">College</span>
+			</>
+		),
+		description: `<p>
 					O melhor lugar para sua especialização no Canadá, em Engenharia,
 					Saúde, Meio Ambiente e Negócios! Um dos melhores colleges da Província
 					de Ontário em Satisfação do Estudante, o Sault College possui seu
@@ -26,8 +32,33 @@ export default function QuemSomos() {
 					alinhados às oportunidades de trabalho em Sault Ste. Marie, estão nas
 					áreas de Trades, Engenharia, Saúde, Meio Ambiente, Negócios/Logística
 					e também, Serviços Comunitários.
-				</p>
-			</div>
-		</section>
-	)
+				</p>`,
+	},
+	programas: {
+		title: (
+			<>
+				Conheça nossos <span className="text-highlight block">programas</span>
+			</>
+		),
+		cards: [
+			{
+				title: "Health Programs",
+				img_src: "/programas-4-sc.webp",
+			},
+			{
+				title: "Skilled Trades and Transportation",
+				img_src: "/programas-3-sc.png",
+			},
+			{
+				title: "Engineering & Trades",
+				img_src: "/programas-2-sc.png",
+			},
+			{
+				title: "Community Services",
+				img_src: "/programas-1-sc.png",
+			},
+		],
+    oportunidade: "Essa é sua oportunidade de garantir uma Graduação ou Pós-Graduação Internacional",
+    logo: "/sc-icon.svg"
+	},
 }

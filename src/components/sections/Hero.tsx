@@ -4,7 +4,7 @@ export default function Hero() {
 	return (
 		<section id="hero" className="flex flex-col lg:flex-row gap-6 items-center">
 			<div className="w-full lg:w-5/12">
-				<h1 className="text-6xl lg:text-8xl text-background dark:text-foreground">
+				<h1 className="text-6xl lg:text-8xl text-title dark:text-foreground">
 					<span className="text-highlight">Estude</span> e{" "}
 					<span className="text-highlight">trabalhe</span>, ao mesmo tempo, no
 					Canadá

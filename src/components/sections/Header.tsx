@@ -4,7 +4,7 @@ import Socials from "../socials"
 
 export default function Header() {
 	return (
-		<header className="fixed inset-0 container px-3 md:px-0 mx-auto bg-background text-green-200 flex items-center justify-between h-22.5">
+		<header className="fixed z-50 inset-0 container px-3 md:px-0 mx-auto bg-background text-green-200 flex items-center justify-between h-22.5">
 			<div className="wrapper h-full py-4">
 				<Image
 					src="/logo-sault-color.svg"
