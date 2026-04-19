@@ -1,3 +1,4 @@
+import { url } from "inspector"
 import { title } from "process"
 
 export const DATA = {
@@ -11,6 +12,9 @@ export const DATA = {
 		),
 		image_src: "/estudetrabalhe.webp",
 	},
+  main_video: {
+    urlID: "9S2mUxGI6Cc"
+  },
 	quem_somos: {
 		title: (
 			<>
@@ -74,7 +78,7 @@ export const DATA = {
 				</>
 			),
 			description: (
-				<ul>
+				<ul className="list-disc pl-5">
 					<li>Localização;</li>
 					<li>Custo de Vida acessível;</li>
 					<li>Boa Empregabilidade;</li>
@@ -93,7 +97,7 @@ export const DATA = {
 				</>
 			),
 			description: (
-				<ul>
+				<ul className="list-disc pl-5">
 					<li>
 						Uma das Principais Instituições de Ensino de Ontário em Satisfação
 						do Estudante;
@@ -119,9 +123,9 @@ export const DATA = {
 		),
 		videos: {
 			urls: [
-				"https://www.youtube.com/watch?v=QNCKY3g-rnA",
-				"https://www.youtube.com/watch?v=viYqPg6_zII",
-				"https://www.youtube.com/watch?v=m0uPuiu1yCs",
+				"QNCKY3g-rnA",
+				"viYqPg6_zII",
+				"m0uPuiu1yCs",
 			],
 		},
 	},

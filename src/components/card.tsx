@@ -1,18 +1,32 @@
+import { cn } from "@/lib/utils"
 import Image from "next/image"
+import React from "react"
 
 type CardProps = {
+	icon?: React.ReactNode
 	title: string
 	img_src: string
 	obs?: string
 }
 
 type CardComponent = {
+	className?: string
 	data: CardProps
 }
 
-export default function Card({ data }: CardComponent) {
+export default function Card({ data, className }: CardComponent) {
 	return (
-		<div className="bg-green-200 p-5 rounded-3xl flex flex-col gap-3">
+		<div
+			className={cn(
+				"bg-green-200 p-5 rounded-3xl flex flex-col gap-3 relative",
+				{ className },
+			)}
+		>
+			{data.icon && (
+				<div className="absulute -translate-y-1/2 top-0 w-16 h-16 rounded-full bg-blue-100">
+					{data.icon}
+				</div>
+			)}
 			<div className="w-full aspect-video rounded-3xl overflow-hidden">
 				<Image
 					src={data.img_src}
@@ -28,6 +42,8 @@ export default function Card({ data }: CardComponent) {
 				<h3 className="text-2xl lg:text-4xl font-medium text-center text-background dark:text-foreground">
 					{data.title}
 				</h3>
+
+        {data.obs && data.obs}
 			</div>
 		</div>
 	)

@@ -6,14 +6,16 @@ export default function Header() {
 	return (
 		<header className="fixed z-50 inset-0 container px-3 md:px-0 mx-auto bg-background text-green-200 flex items-center justify-between h-22.5">
 			<div className="wrapper h-full py-4">
-				<Image
-					src="/logo-sault-color.svg"
-					alt="Logo"
-					width={150}
-					height={50}
-					loading="eager"
-					className="h-full w-auto"
-				/>
+				<Link href="/">
+					<Image
+						src="/logo-sault-color.svg"
+						alt="Logo"
+						width={150}
+						height={50}
+						loading="eager"
+						className="h-full w-auto"
+					/>
+				</Link>
 			</div>
 
 			<nav className="hidden lg:flex items-center gap-4 text-lg">

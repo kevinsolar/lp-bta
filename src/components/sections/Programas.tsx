@@ -1,12 +1,14 @@
 import { DATA } from "@/utils/mock"
 import Image from "next/image"
 import Card from "../card"
+import { Button } from "../ui/button"
+import Link from "next/link"
 
 export default function Programas() {
 	const sec = DATA.programas
 
 	return (
-		<section id="programas" className="flex flex-col gap-10">
+		<section id="programas" className="flex flex-col gap-10 py-10">
 			<h2 className="text-6xl lg:text-8xl mb-6 text-title dark:text-foreground">
 				{sec.title}
 			</h2>
@@ -31,6 +33,12 @@ export default function Programas() {
 						loading="lazy"
 					/>
 				</div>
+			</div>
+
+      <div className="flex pt-4">
+				<Button variant="secondary" className="mx-auto" asChild>
+					<Link href="#contato">Fale conosco e saiba mais</Link>
+				</Button>
 			</div>
 		</section>
 	)
