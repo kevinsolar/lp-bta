@@ -1,8 +1,11 @@
 import type { Metadata } from "next"
-import { Montserrat } from "next/font/google"
+import { Montserrat, Inter } from "next/font/google"
 import "./globals.css"
 import Header from "@/components/sections/Header"
 import Footer from "@/components/sections/Footer"
+import { cn } from "@/lib/utils";
+
+const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 
 const montserrat = Montserrat({
 	subsets: ["latin"],
@@ -19,7 +22,7 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang="pt-BR" className={`${montserrat.className} h-full`}>
+		<html lang="pt-BR" className={cn("h-full", montserrat.className, "font-sans", inter.variable)}>
 			<body className="min-h-full container px-3 mx-auto flex flex-col antialiased">
 				<Header />
 				{children}
