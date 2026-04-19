@@ -1,3 +1,5 @@
+import { title } from "process"
+
 export const DATA = {
 	hero: {
 		title: (
@@ -58,7 +60,69 @@ export const DATA = {
 				img_src: "/programas-1-sc.png",
 			},
 		],
-    oportunidade: "Essa é sua oportunidade de garantir uma Graduação ou Pós-Graduação Internacional",
-    logo: "/sc-icon.svg"
+		oportunidade:
+			"Essa é sua oportunidade de garantir uma Graduação ou Pós-Graduação Internacional",
+		logo: "/sc-icon.svg",
+	},
+	diferenciais: {
+		bloco_1: {
+			title: (
+				<>
+					Diferenciais
+					<br />
+					<span className="text-highlight block">Sault Ste. Marie</span>
+				</>
+			),
+			description: (
+				<ul>
+					<li>Localização;</li>
+					<li>Custo de Vida acessível;</li>
+					<li>Boa Empregabilidade;</li>
+					<li>Natureza Exuberante;</li>
+					<li>Qualidade de Vida incrível;</li>
+					<li>Senso de Pertencimento;</li>
+				</ul>
+			),
+		},
+		bloco_2: {
+			title: (
+				<>
+					Diferenciais
+					<br />
+					<span className="text-highlight block">Sault College</span>
+				</>
+			),
+			description: (
+				<ul>
+					<li>
+						Uma das Principais Instituições de Ensino de Ontário em Satisfação
+						do Estudante;
+					</li>
+					<li>Especialista em Programas de Engenharia, Trades e Saúde;</li>
+					<li>Mais de 70 opções de Graduações e Pós-Graduações;</li>
+					<li>Excelente estrutura;</li>
+					<li>Residência Estudantil com baixo investimento;</li>
+					<li>Ótimo relacionamento com empresas da região;</li>
+					<li>Apoio total ao estudante;</li>
+					<li>Centro de Carreiras;</li>
+					<li>Professores qualificados e dentro do mercado;</li>
+				</ul>
+			),
+		},
+	},
+	conheca: {
+		title: (
+			<>
+				<span className="text-highlight block">Conheça mais</span>
+				sobre o Sault College
+			</>
+		),
+		videos: {
+			urls: [
+				"https://www.youtube.com/watch?v=QNCKY3g-rnA",
+				"https://www.youtube.com/watch?v=viYqPg6_zII",
+				"https://www.youtube.com/watch?v=m0uPuiu1yCs",
+			],
+		},
 	},
 }
