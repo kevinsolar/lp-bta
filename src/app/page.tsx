@@ -1,4 +1,5 @@
 import Conheca from "@/components/sections/Conheca";
+import ContactForm from "@/components/sections/Contato";
 import Diferenciais from "@/components/sections/Diferenciais";
 import Hero from "@/components/sections/Hero";
 import MainVideo from "@/components/sections/MainVideo";
@@ -14,6 +15,7 @@ export default function Home() {
       <Programas />
       <Diferenciais />
       <Conheca />
+      <ContactForm />
 		</main>
 	)
 }
