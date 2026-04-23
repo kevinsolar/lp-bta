@@ -6,6 +6,8 @@ import MainVideo from "@/components/sections/MainVideo";
 import Programas from "@/components/sections/Programas";
 import QuemSomos from "@/components/sections/QuemSomos";
 
+export const revalidate = 3600
+
 export default function Home() {
 	return (
 		<main className="flex flex-col flex-1 gap-10 lg:gap-16 items-center mt-22.5">
