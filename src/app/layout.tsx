@@ -28,10 +28,6 @@ export default function RootLayout({
 				montserrat.className,
 			)}
 		>
-			<head>
-				<link rel="preconnect" href="https://fonts.googleapis.com" />
-				<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-			</head>
 			<body className="min-h-full container px-3 mx-auto flex flex-col antialiased selection:bg-green-100 selection:text-title dark:selection:bg-blue-300">
 				<Header />
 				{children}

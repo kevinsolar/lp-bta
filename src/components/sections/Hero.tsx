@@ -18,7 +18,7 @@ export default function Hero() {
 					width={1000}
 					height={850}
 					sizes="(max-width: 480px) 100vw, (max-width: 1024px) 90vw, 50vw"
-					className="w-full lg:object-contain"
+					className="w-full h-auto lg:object-contain"
 					priority
 					fetchPriority="high"
 					quality={85}

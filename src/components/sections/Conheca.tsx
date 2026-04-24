@@ -14,23 +14,23 @@ const Carousel = dynamic(
 		loading: () => (
 			<div className="w-full h-64 animate-pulse bg-muted rounded-lg" />
 		),
-	}
+	},
 )
 const CarouselContent = dynamic(
 	() => import("../ui/carousel").then((mod) => mod.CarouselContent),
-	{ ssr: false }
+	{ ssr: false },
 )
 const CarouselItem = dynamic(
 	() => import("../ui/carousel").then((mod) => mod.CarouselItem),
-	{ ssr: false }
+	{ ssr: false },
 )
 const CarouselNext = dynamic(
 	() => import("../ui/carousel").then((mod) => mod.CarouselNext),
-	{ ssr: false }
+	{ ssr: false },
 )
 const CarouselPrevious = dynamic(
 	() => import("../ui/carousel").then((mod) => mod.CarouselPrevious),
-	{ ssr: false }
+	{ ssr: false },
 )
 
 function YouTubeEmbed({
@@ -54,24 +54,6 @@ function YouTubeEmbed({
 			setLoaded(true)
 			return
 		}
-
-		const observer = new IntersectionObserver(
-			(entries) => {
-				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
-						setLoaded(true)
-						observer.disconnect()
-					}
-				})
-			},
-			{ rootMargin: "200px" },
-		)
-
-		if (containerRef.current) {
-			observer.observe(containerRef.current)
-		}
-
-		return () => observer.disconnect()
 	}, [loading])
 
 	if (!loaded) {
@@ -120,10 +102,7 @@ export default function Conheca() {
 						<CarouselContent>
 							{videos.urls.map((url, i) => (
 								<CarouselItem key={i}>
-									<YouTubeEmbed
-										videoId={url}
-										loading="lazy"
-									/>
+									<YouTubeEmbed videoId={url} loading="lazy" />
 								</CarouselItem>
 							))}
 						</CarouselContent>

@@ -8,32 +8,10 @@ import { Play } from "lucide-react"
 export default function MainVideo() {
 	const { main_video } = DATA
 	const [loaded, setLoaded] = useState(false)
-	const containerRef = useRef<HTMLDivElement>(null)
-
-	useEffect(() => {
-		const observer = new IntersectionObserver(
-			(entries) => {
-				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
-						setLoaded(true)
-						observer.disconnect()
-					}
-				})
-			},
-			{ rootMargin: "200px" }
-		)
-
-		if (containerRef.current) {
-			observer.observe(containerRef.current)
-		}
-
-		return () => observer.disconnect()
-	}, [])
 
 	return (
 		<section id="video" className="w-full">
 			<div
-				ref={containerRef}
 				className="rounded-2xl w-full aspect-20/9 bg-neutral-800 flex items-center justify-center cursor-pointer relative overflow-hidden"
 				onClick={() => setLoaded(true)}
 			>
