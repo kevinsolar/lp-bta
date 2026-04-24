@@ -49,8 +49,8 @@ export default function MainVideo() {
 					</>
 				) : (
 					<iframe
-						width="100vw"
-						height="50vw"
+						width="100%"
+						height="100%"
 						src={`https://www.youtube.com/embed/${main_video.urlID}?`}
 						title="YouTube video player"
 						frameBorder="0"
