@@ -20,6 +20,8 @@ export default function Hero() {
 					sizes="(max-width: 480px) 100vw, (max-width: 1024px) 90vw, 50vw"
 					className="w-full lg:object-contain"
 					priority
+					fetchPriority="high"
+					quality={85}
 				/>
 				<div className="bg absolute -z-1 bottom-0 left-0 w-full h-[83%] bg-green-200 rounded-4xl shadow-lg" />
 			</div>

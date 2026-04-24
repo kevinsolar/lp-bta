@@ -29,9 +29,8 @@ export default function RootLayout({
 			)}
 		>
 			<head>
-				<link rel="preconnect" href="https://www.youtube.com" />
-				<link rel="preconnect" href="https://www.google.com" />
-				<link rel="preconnect" href="https://i.ytimg.com" />
+				<link rel="preconnect" href="https://fonts.googleapis.com" />
+				<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 			</head>
 			<body className="min-h-full container px-3 mx-auto flex flex-col antialiased selection:bg-green-100 selection:text-title dark:selection:bg-blue-300">
 				<Header />

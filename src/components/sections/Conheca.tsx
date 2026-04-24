@@ -2,15 +2,36 @@
 import { DATA } from "@/utils/mock"
 import { Button } from "../ui/button"
 import Link from "next/link"
-import {
-	Carousel,
-	CarouselContent,
-	CarouselItem,
-	CarouselNext,
-	CarouselPrevious,
-} from "../ui/carousel"
+import dynamic from "next/dynamic"
 import { useEffect, useState, useRef } from "react"
 import { Play } from "lucide-react"
+
+// Dynamic import do carousel para reduzir bundle inicial
+const Carousel = dynamic(
+	() => import("../ui/carousel").then((mod) => mod.Carousel),
+	{
+		ssr: false,
+		loading: () => (
+			<div className="w-full h-64 animate-pulse bg-muted rounded-lg" />
+		),
+	}
+)
+const CarouselContent = dynamic(
+	() => import("../ui/carousel").then((mod) => mod.CarouselContent),
+	{ ssr: false }
+)
+const CarouselItem = dynamic(
+	() => import("../ui/carousel").then((mod) => mod.CarouselItem),
+	{ ssr: false }
+)
+const CarouselNext = dynamic(
+	() => import("../ui/carousel").then((mod) => mod.CarouselNext),
+	{ ssr: false }
+)
+const CarouselPrevious = dynamic(
+	() => import("../ui/carousel").then((mod) => mod.CarouselPrevious),
+	{ ssr: false }
+)
 
 function YouTubeEmbed({
 	videoId,

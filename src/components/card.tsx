@@ -33,9 +33,10 @@ export default function Card({ data, className }: CardComponent) {
 					alt={data.title}
 					width={400}
 					height={225}
-					sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
+					sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
 					className="w-full h-full object-cover"
-          quality={90}
+					quality={85}
+					loading="lazy"
 				/>
 			</div>
 
