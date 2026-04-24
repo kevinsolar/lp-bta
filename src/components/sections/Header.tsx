@@ -10,8 +10,9 @@ export default function Header() {
 					<Image
 						src="/logo-sault-color.svg"
 						alt="Logo"
-						width={150}
-						height={50}
+						width={180}
+						height={60}
+						sizes="180px"
 						loading="eager"
 						className="h-full w-auto"
 					/>

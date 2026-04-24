@@ -12,9 +12,12 @@ export default function QuemSomos() {
 				<Image
 					src="/quem-somos.jpg"
 					alt="Sault College"
-					width={1000}
-					height={600}
+					width={800}
+					height={800}
+					sizes="(max-width: 1024px) 100vw, 50vw"
 					className="w-full h-full object-cover"
+          quality={85}
+          loading="lazy"
 				/>
 			</div>
 			<div className="lg:px-16 order-1 lg:order-2">

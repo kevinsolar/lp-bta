@@ -23,6 +23,11 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="pt-BR" className={cn("h-full", montserrat.className, "font-sans", inter.variable)}>
+			<head>
+				<link rel="preconnect" href="https://www.youtube.com" />
+				<link rel="preconnect" href="https://www.google.com" />
+				<link rel="preconnect" href="https://i.ytimg.com" />
+			</head>
 			<body className="min-h-full container px-3 mx-auto flex flex-col antialiased selection:bg-green-100 selection:text-title dark:selection:bg-blue-300">
 				<Header />
 				{children}

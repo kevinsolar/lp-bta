@@ -27,8 +27,9 @@ export default function Programas() {
 					<Image
 						src={sec.logo}
 						alt="Sault College"
-						width={100}
-						height={100}
+						width={150}
+						height={150}
+						sizes="(max-width: 1024px) 20vw, 150px"
 						className="h-full w-auto"
 						loading="lazy"
 					/>

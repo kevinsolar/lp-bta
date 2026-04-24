@@ -15,11 +15,12 @@ export default function Hero() {
 				<Image
 					src="/estudetrabalhe.webp"
 					alt="Estude e trabalhe no Canadá"
-					width={500}
-					height={300}
+					width={1000}
+					height={850}
+					sizes="(max-width: 1024px) 100vw, 50vw"
 					className="w-full lg:object-contain"
 					priority
-					quality={90}
+					quality={85}
 				/>
 				<div className="bg absolute -z-1 bottom-0 left-0 w-full h-[83%] bg-green-200 rounded-4xl shadow-lg" />
 			</div>
