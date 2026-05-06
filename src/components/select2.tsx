@@ -64,7 +64,7 @@ export const Select = ({ className, options, placeholder, ...props }: SelectProp
 				<ul
 					className={cn(
 						"absolute z-50 w-full mt-1 bg-gray-950 border-[1.5px] border-gray-400 rounded-b-lg max-h-48 overflow-y-auto",
-						"dark:bg-gray-950 dark:border-blue-200",
+						"dark:bg-background dark:border-blue-200",
 					)}
 					role="listbox"
 				>

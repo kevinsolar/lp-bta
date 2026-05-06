@@ -96,7 +96,7 @@ export default function Conheca() {
 
 	return (
 		<section id="conheca" className="w-full py-10 space-y-10">
-			<div className="flex flex-col lg:flex-row">
+			<div className="flex flex-col gap-6 lg:flex-row lg:gap-0">
 				<div className="w-full lg:w-1/2 pr-20">
 					<Carousel opts={{ loop: true }}>
 						<CarouselContent>
