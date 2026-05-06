@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import Socials from "../socials"
+import HamburgerMenu from "../hamburger-menu"
 
 export default function Header() {
 	return (
@@ -43,6 +44,8 @@ export default function Header() {
 					<Socials />
 				</div>
 			</nav>
+
+      <HamburgerMenu />
 		</header>
 	)
 }

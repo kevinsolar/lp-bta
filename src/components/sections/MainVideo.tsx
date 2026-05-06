@@ -4,6 +4,7 @@ import { Button } from "../ui/button"
 import Link from "next/link"
 import { useState } from "react"
 import { Play } from "lucide-react"
+import Image from "next/image"
 
 export default function MainVideo() {
 	const { main_video } = DATA
@@ -12,17 +13,25 @@ export default function MainVideo() {
 	return (
 		<section id="video" className="w-full">
 			<div
-				className="rounded-2xl w-full aspect-20/9 bg-neutral-800 flex items-center justify-center cursor-pointer relative overflow-hidden"
+				className="rounded-2xl w-full aspect-20/9 flex items-center justify-center cursor-pointer relative overflow-hidden bg-neutral-800"
 				onClick={() => setLoaded(true)}
 			>
 				{!loaded ? (
 					<>
-						<div className="absolute inset-0 bg-linear-to-br from-neutral-800 to-neutral-900" />
+						<Image
+							src={`https://i.ytimg.com/vi/${main_video.urlID}/maxresdefault.jpg`}
+							alt="Thumbnail do vídeo"
+							fill
+							className="object-cover rounded-2xl"
+							priority
+							sizes="(max-width: 768px) 100vw, 1280px"
+						/>
+						<div className="absolute inset-0 bg-black/30 rounded-2xl" />
 						<div className="relative z-10 flex flex-col items-center gap-4">
 							<div className="w-20 h-20 rounded-full bg-red-600 flex items-center justify-center transition-transform hover:scale-110">
 								<Play className="w-10 h-10 text-white ml-1" fill="white" />
 							</div>
-							<span className="text-neutral-400 text-sm">Carregar vídeo</span>
+							<span className="text-white text-sm drop-shadow">Carregar vídeo</span>
 						</div>
 					</>
 				) : (

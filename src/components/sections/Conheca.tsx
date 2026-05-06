@@ -5,6 +5,7 @@ import Link from "next/link"
 import dynamic from "next/dynamic"
 import { useEffect, useState, useRef } from "react"
 import { Play } from "lucide-react"
+import Image from "next/image"
 
 // Dynamic import do carousel para reduzir bundle inicial
 const Carousel = dynamic(
@@ -63,12 +64,20 @@ function YouTubeEmbed({
 				className="rounded-2xl w-full aspect-video bg-neutral-800 flex items-center justify-center cursor-pointer relative overflow-hidden"
 				onClick={handlePlay}
 			>
-				<div className="absolute inset-0 bg-gradient-to-br from-neutral-800 to-neutral-900" />
+				<Image
+					src={`https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`}
+					alt="Thumbnail do vídeo"
+					fill
+					className="object-cover rounded-2xl"
+					loading={loading}
+					sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 640px"
+				/>
+				<div className="absolute inset-0 bg-black/30 rounded-2xl" />
 				<div className="relative z-10 flex flex-col items-center gap-4">
 					<div className="w-16 h-16 rounded-full bg-red-600 flex items-center justify-center transition-transform hover:scale-110">
 						<Play className="w-8 h-8 text-white ml-1" fill="white" />
 					</div>
-					<span className="text-neutral-400 text-sm">Carregar vídeo</span>
+					<span className="text-white text-sm drop-shadow">Carregar vídeo</span>
 				</div>
 			</div>
 		)
